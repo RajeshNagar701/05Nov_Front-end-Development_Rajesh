@@ -1,0 +1,35 @@
+<!--
+The filter() method creates a new array filled with elements that pass a test 
+provided by a function.
+
+The filter() method does not execute the function for empty elements.
+
+The filter() method does not change the original array.
+
+array.filter(function(currentValue, index, arr), thisValue)
+
+Return element
+-->
+
+<p><input type="number" id="ageToCheck" value="30"></p>
+<button onclick="myFunction()">Test</button>
+
+<p id="demo"></p>
+
+<script>
+const ages = [32, 33, 12, 40];
+
+function checkAge(age) {
+  return age > document.getElementById("ageToCheck").value;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(checkAge);
+}
+</script>
+
+<script>
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let lessThen5 = number.filter((value, index, e) => value>5 );
+document.write(lessThen5);
+</script>

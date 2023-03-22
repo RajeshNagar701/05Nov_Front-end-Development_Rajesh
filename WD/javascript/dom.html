@@ -1,0 +1,108 @@
+
+
+
+
+<p id="text"></p>
+
+
+
+<script>
+	document.getElementById('text').innerText="<H1>text hello<H1>"
+</script>
+
+
+
+
+
+<hr>
+
+<p id="demo"></p>
+
+
+
+<script>
+	document.getElementById('demo').innerHTML="<H1>HELLO<H1>"
+</script>
+
+
+
+<h1 id="html">Hello</h1>
+
+<span id="print" style="color:red"></span>
+
+<button id="btn1" onclick="html()">Click 1</button>
+
+<script>
+
+function html()
+	{
+		var htmlcode=document.getElementById("html").innerHTML;
+		document.getElementById("print").innerHTML=htmlcode;
+	}
+
+</script>
+
+<hr>
+
+
+
+<input type="text" id="code" placeholder="Enter Your Code" >
+<button id="btn2" onclick="input()">Click 2</button>
+
+<h1 id="inputdata"></h1>
+
+<script>
+function input()
+	{
+		var inputvalue=document.getElementById("code").value;
+		document.getElementById("inputdata").innerHTML=inputvalue;
+	}
+</script>
+
+<HR>
+
+<button id="plus" onclick="plus()">+</button>
+<h1 id="number">0</h1>
+<button id="minus" onclick="minus()">-</button>
+
+<script>
+function plus()
+	{
+		var number=document.getElementById("number").innerHTML;
+		number++;
+		document.getElementById("number").innerHTML=number;
+	}
+function minus()
+	{
+		var number=document.getElementById("number").innerHTML;
+		number--;
+		document.getElementById("number").innerHTML=number;
+	}	
+</script>
+
+<HR>
+
+<button id="plus1" onclick="plus1()">+</button>
+<input type="number" id="number1" value="0">
+<button id="minus1" onclick="minus1()">-</button>
+
+<script>
+function plus1()
+	{
+		var number1=document.getElementById("number1").value;
+		number1++;
+		document.getElementById("number1").value=number1;
+	}
+function minus1()
+	{
+		var number1=document.getElementById("number1").value;
+		number1--;
+		if(number1<0)
+		{
+		}
+		else
+		{
+		document.getElementById("number1").value=number1;
+		}
+	}	
+</script>

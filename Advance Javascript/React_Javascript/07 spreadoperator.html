@@ -1,0 +1,70 @@
+
+<!--
+The JavaScript spread operator (...) allows us to quickly copy 
+all or part of an existing array or object into another array or object.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="twoTable(2)">2 table</button>
+    <button onclick="twoTable(3)">3 table</button>
+    <button onclick="twoTable(4)">4 Table</button>
+    <script>
+	let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	let number2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+	let number3 = [...number, ...number2];
+	document.write(number3 + "<br>");
+
+
+	const numbers = [1, 2, 3, 4, 5, 6];
+
+	const [first, second, ...rest] = numbers;
+	
+	document.write(`${first}<br>`);
+	document.write(`${second}<br>`);
+	document.write(`${rest}<br>`);
+	
+
+	
+
+	
+		const myVehicle = {
+		  brand: 'Ford',
+		  model: 'Mustang',
+		  color: 'red'
+		}
+		
+		const updateMyVehicle = {
+		  type: 'car',
+		  year: 2021, 
+		  color: 'yellow'
+		}
+	
+		const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+		
+		
+		//document.write(myUpdatedVehicle[type])
+		
+		for (var property in myUpdatedVehicle) 
+		{
+		  document.write(property + " : " + myUpdatedVehicle[property] + "<br>"); 
+		}
+		
+		
+	
+	
+      
+
+    </script>
+  </body>
+</html>
